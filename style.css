@@ -1,0 +1,148 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* LAYOUT */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.site-header {
+  background-color: #0078a8;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.site-header p {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  background-color: white;
+  padding: 90px 20px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image img {
+ width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+
+
+.about-text h2 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.about-text p {
+  line-height: 1.7;
+  margin-bottom: 18px;
+  max-width: 55ch;
+}
+
+.section-divider {
+  width: 80%;
+  height: 3px;
+  background-color: #a4bcc4;
+  margin: 60px auto;
+}
+
+/* WORK SECTION */
+#work {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+}
+
+#work h2 {
+  margin-bottom: 4rem;
+  font-size: 26px;
+}
+
+/* PROJECT ROWS */
+.project-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+
+/* IMAGE BLOCK */
+.project-image {
+  padding: 0;
+  background-color: transparent;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.project-image img.large-image {
+  max-width: 650px;
+}
+
+.project-image img.large-image2 {
+  max-width: 300px;
+}
+
+/* TEXT BLOCK */
+.project-text {
+  padding-right: 2rem;
+}
+
+.project-text h3 {
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+.project-text p {
+  max-width: 55ch;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #0078a8;
+  color: white;
+  text-align: center;
+  padding: 22px;
+  margin-top: auto;
+}
