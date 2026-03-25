@@ -6,143 +6,137 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-  color: #222;
+  /* Cleaner, modern font stack */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fcfcfc; /* Soft off-white */
+  color: #333;
+  line-height: 1.6;
   min-height: 100vh;
-}
-
-/* LAYOUT */
-body {
-  display: flex;
-  flex-direction: column;
 }
 
 /* HEADER */
 .site-header {
-  background-color: #0078a8;
+  background-color: #1a2b3c; /* Deep, professional navy */
   color: white;
   text-align: center;
-  padding: 70px 20px;
+  padding: 100px 20px;
 }
 
 .site-header h1 {
   margin: 0;
-  font-size: 34px;
+  font-size: 2.5rem;
+  letter-spacing: -1px;
 }
 
 .site-header p {
-  margin-top: 12px;
-  font-size: 16px;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 300;
 }
 
 /* ABOUT SECTION */
 .about-section {
-  background-color: white;
-  padding: 90px 20px;
+  padding: 80px 20px;
 }
 
 .about-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 1fr 1.5fr; /* Improved proportions */
   gap: 60px;
   align-items: center;
 }
 
-.about-image img {
- width: 100%;
-  max-width: 420px;
+/* Polished Image Style */
+.about-image img, 
+.project-image img {
+  width: 100%;
   height: auto;
-  display: block;
-  margin: 0;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Soft modern shadow */
+  transition: transform 0.3s ease; /* Subtle hover effect */
 }
 
-
+.about-image img:hover,
+.project-image img:hover {
+  transform: translateY(-5px);
+}
 
 .about-text h2 {
-  margin-top: 0;
-  font-size: 26px;
-}
-
-.about-text p {
-  line-height: 1.7;
-  margin-bottom: 18px;
-  max-width: 55ch;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1a2b3c;
 }
 
 .section-divider {
-  width: 80%;
-  height: 3px;
-  background-color: #a4bcc4;
-  margin: 60px auto;
+  width: 60px; /* Smaller, modern accent line */
+  height: 4px;
+  background-color: #0078a8;
+  margin: 80px auto;
+  border-radius: 2px;
 }
 
 /* WORK SECTION */
 #work {
-  max-width: 1500px;
+  max-width: 1100px; /* Contained width looks more intentional */
   margin: 0 auto;
-  padding: 5rem 4rem;
+  padding: 60px 20px;
 }
 
 #work h2 {
-  margin-bottom: 4rem;
-  font-size: 26px;
+  text-align: center;
+  margin-bottom: 80px;
+  font-size: 2rem;
 }
 
 /* PROJECT ROWS */
 .project-row {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
   align-items: center;
-  margin-bottom: 6rem;
+  margin-bottom: 120px;
 }
 
-
-/* IMAGE BLOCK */
-.project-image {
-  padding: 0;
-  background-color: transparent;
+/* Alternate rows so images aren't all on the same side */
+.project-row:nth-child(even) {
+  direction: rtl;
 }
-
-.project-image img {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  display: block;
-  margin: 0;
-}
-
-.project-image img.large-image {
-  max-width: 650px;
-}
-
-.project-image img.large-image2 {
-  max-width: 300px;
-}
-
-/* TEXT BLOCK */
-.project-text {
-  padding-right: 2rem;
+.project-row:nth-child(even) .project-text {
+  direction: ltr; /* Reset text direction for readability */
 }
 
 .project-text h3 {
-  margin-bottom: 1rem;
-  font-size: 20px;
+  font-size: 1.5rem;
+  color: #1a2b3c;
+  margin-bottom: 15px;
 }
 
 .project-text p {
-  max-width: 55ch;
-  line-height: 1.7;
+  color: #555;
 }
 
 /* FOOTER */
 .site-footer {
-  background-color: #0078a8;
+  background-color: #1a2b3c;
   color: white;
   text-align: center;
-  padding: 22px;
-  margin-top: auto;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE - Important for "Nice" sites */
+@media (max-width: 768px) {
+  .about-container, .project-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .project-row:nth-child(even) {
+    direction: ltr;
+  }
 }
